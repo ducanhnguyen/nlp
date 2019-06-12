@@ -19,17 +19,37 @@ The value between a term and an email can be (1) the number of occurrences of th
 
 Secondly, we need to train to build a classifier.
 
-Model: MultinomialNB (because we will use count vectorizer or tf-idf transformer, multinomial NB should be used)
+*Model*: The paper introducing this dataset used several models, but I just use MultinomialNB. Because we will use count vectorizer or tf-idf transformer to build term-document matrix, multinomial NB should be used.
 
-Result: using count vectorizer is better than tf-idf transformer.
+*Result*: using count vectorizer is better than tf-idf transformer.
 
 | vectorizer | test set | train set | 
 | --- | --- | --- |
 |count vectorizer| 0.98| 0.995
 |tf-idf transformer| 0.968 | 0.981 | 
 
+### Reviews classifier
+
+Build a classifier to detect if a review is positive or negative.
+
+Dataset: https://www.kaggle.com/snap/amazon-fine-food-reviews
+
 <img src="https://github.com/ducanhnguyen/nlp/blob/master/img/review.png" width="950">
 
+Accuracy (on 50000 reviews) = 0.896 (test set), 0.9163 (training set)
+
+# Latent semantic analysis
+
+Convert terms into vector and plot them in two dimensional space. The same meaning terms tend to be closer in the plot.
+
+Dataset: https://www.kaggle.com/rmisra/news-category-dataset
+
+Output:
+
 <img src="https://github.com/ducanhnguyen/nlp/blob/master/img/lsa-0.png" width="950">
+
 <img src="https://github.com/ducanhnguyen/nlp/blob/master/img/lsa-1.png" width="950">
+
 <img src="https://github.com/ducanhnguyen/nlp/blob/master/img/lsa-2.png" width="950">
+
+# Article spinning
