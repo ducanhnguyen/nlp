@@ -38,7 +38,7 @@ Dataset: https://www.kaggle.com/snap/amazon-fine-food-reviews
 
 Accuracy (on 50000 reviews) = 0.896 (test set), 0.9163 (training set)
 
-# Latent semantic analysis
+### Latent semantic analysis
 
 Convert terms into vector and plot them in two dimensional space. The same meaning terms tend to be closer in the plot.
 
